@@ -1,11 +1,12 @@
 import register from '../../cypress/support/pageObject/register-page'
 import login from '../../cypress/support/pageObject/login-page'
 import forgotPassword from '../../cypress/support/pageObject/forgotPassword-page'
+
+const Register = new register()
 const Login = new login()
 const ForgotPassword = new forgotPassword()
+
 describe('feature-registration', () => {  
-    const Register = new register()
-    const Login = new login()
     beforeEach(() => {
         cy.visit('/')
         Login.go_to_login_page()
