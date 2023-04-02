@@ -18,7 +18,7 @@ describe('feature-registration', () => {
         Register.go_to_register_page()
     })
     it('TC01-Pengguna gagal registrasi menggunakan email terdaftar', () => {
-        Register.input_fullname('shidqi adiatma')
+        Register.input_fullname(faker.name.fullName())
         Register.input_email(emailTester)
         Register.input_password(passwordTester)
         Register.clickButton_registrasi()
@@ -102,7 +102,7 @@ describe('feature-updateProfile', () => {
         UpdateProfile.verify_failed_updateProfile()
     })
     it('TC10-Pengguna berhasil memperbarui data profile dengan mengisi semua data yang valid', () => {
-        UpdateProfile.fill_fullName(faker.name.fullName)
+        UpdateProfile.fill_fullName(faker.name.fullName())
         UpdateProfile.fill_email(emailTester)
         UpdateProfile.fill_noHandphone(faker.phone.number())
         UpdateProfile.fill_tanggalLahir(faker.date.birthdate())
