@@ -102,9 +102,9 @@ describe('feature-updateProfile', () => {
         UpdateProfile.verify_failed_updateProfile()
     })
     it('TC10-Pengguna berhasil memperbarui data profile dengan mengisi semua data yang valid', () => {
-        UpdateProfile.fill_fullName('shidqi adiatma')
+        UpdateProfile.fill_fullName(faker.name.fullName)
         UpdateProfile.fill_email(emailTester)
-        UpdateProfile.fill_noHandphone('83526343297')
+        UpdateProfile.fill_noHandphone(faker.phone.number())
         UpdateProfile.fill_tanggalLahir(faker.date.birthdate())
         UpdateProfile.fill_kota(faker.address.cityName())
         UpdateProfile.clickSave_button()
