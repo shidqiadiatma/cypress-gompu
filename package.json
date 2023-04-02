@@ -4,7 +4,8 @@
   "description": "automation testing using cypress",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --headless --browser chrome"
   },
   "keywords": [
     "cypress",
@@ -15,7 +16,10 @@
   "author": "Shidqi Adiatma",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.9.0",
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^12.9.0"
+  },
+  "devDependencies": {
     "cypress-xpath": "^2.0.1"
   }
 }

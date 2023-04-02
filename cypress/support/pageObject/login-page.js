@@ -22,11 +22,12 @@ class login{
         cy.get('#swal2-title').should('have.text', 'Berhasil Masuk!')
     }
     precondition_successLogin() {
-        cy.get('input.border').type('testingweb@dispostable.com')
+        cy.get('input.border').type('shidqiadiatma@dispostable.com')
         cy.get('.grid > .flex > .w-full').type('passwordBenar12*')
         cy.get('.btn-primary').click()
         cy.wait(1)
         cy.get('#swal2-title').should('have.text', 'Berhasil Masuk!')
+        cy.get('.swal2-confirm').click()
     }
 }
 export default login
