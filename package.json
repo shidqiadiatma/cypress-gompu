@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run": "cypress run --headed --browser chrome --reporter mochawesome"
+    "cy:run": "cypress run --headed --browser chrome"
   },
   "keywords": [
     "cypress",
