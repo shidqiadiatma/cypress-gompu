@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run": "cypress run --headless --browser chrome"
+    "cy:run": "cypress run --headed --browser chrome --reporter mochawesome"
   },
   "keywords": [
     "cypress",
@@ -20,6 +20,8 @@
     "cypress": "^12.9.0"
   },
   "devDependencies": {
-    "cypress-xpath": "^2.0.1"
+    "cypress-mochawesome-reporter": "^3.3.0",
+    "cypress-xpath": "^2.0.1",
+    "mochawesome": "^7.1.3"
   }
 }
