@@ -8,14 +8,15 @@ class updateProfile{
         cy.xpath('//*[@id="__layout"]/div/div/form/input[1]').type(' ').clear()
         cy.xpath('//*[@id="__layout"]/div/div/form/input[2]').type(' ').clear()
         cy.xpath('//*[@id="__layout"]/div/div/form/div/input').type(' ').clear()
-        cy.xpath('//*[@id="__layout"]/div/div/form/input[3]').click('').clear()
+        cy.get('input[type="date"]').click('').clear()
         cy.xpath('//*[@id="__layout"]/div/div/form/input[4]').type(' ').clear()
     }
-    do_updateAllDataProfile(fullNameUpdate, emailUpdate, noPhoneUpdate, dateUpdate, cityUpdate){
+    do_updateAllDataProfile(fullNameUpdate, emailUpdate, noPhoneUpdate, gender, dateUpdate, cityUpdate){
         cy.xpath('//*[@id="__layout"]/div/div/form/input[1]').clear().type(fullNameUpdate)
         cy.xpath('//*[@id="__layout"]/div/div/form/input[2]').clear().type(emailUpdate)
-        cy.xpath('//*[@id="__layout"]/div/div/form/div/input').clear().type(noPhoneUpdate)
-        cy.xpath('//*[@id="__layout"]/div/div/form/input[3]').clear().click(dateUpdate)
+        cy.get('.flex > .w-full').clear().type(noPhoneUpdate)
+        cy.get('select.mt-3').select(gender)
+        cy.get('input[type="date"]').type(dateUpdate)
         cy.xpath('//*[@id="__layout"]/div/div/form/input[4]').clear().type(cityUpdate)
     }
     verify_failed_updateProfile(){

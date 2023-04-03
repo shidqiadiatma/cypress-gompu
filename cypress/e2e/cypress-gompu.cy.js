@@ -8,8 +8,19 @@ const Register = new register()
 const Login = new login()
 const ForgotPassword = new forgotPassword()
 const UpdateProfile = new updateProfile()
-const emailTester = ('shidqiadiatma@dispostable.com')
-const passwordTester = ('passwordBenar12*')
+
+//Test Data
+var emailTester = ('shidqiadiatma@dispostable.com')
+var passwordTester = ('passwordBenar12*')
+var selectGender = faker.helpers.arrayElement(['Perempuan', 'Laki-laki'])
+var selectBirthday = faker.helpers.arrayElement(['2000-05-12', '2001-08-12', '2001-04-21', '1990-12-01', '1995-06-09'])
+var randomName = faker.name.firstName()
+var randomCity = faker.address.cityName()
+var randomPhone = Math.floor(100000000 + Math.random() * 900000000000);
+var randomEmail1 = 'email'+ Math.floor(100000000 + Math.random() * 900000000) + '@mail.com';
+var randomEmail2 = faker.internet.email()
+
+var wrongPassword = 'passwordsalah'
 
 describe('[Cypress] feature-registration', () => {  
     beforeEach(() => {
@@ -18,16 +29,16 @@ describe('[Cypress] feature-registration', () => {
         Register.go_to_register_page()
     })
     it('TC01-Pengguna gagal registrasi menggunakan email terdaftar', () => {
-        Register.do_register(faker.name.firstName(), emailTester, passwordTester)
+        Register.do_register(randomName, emailTester, passwordTester)
         Register.click_btnRegistrasi()
         Register.verify_failed_register_using_registered_email()
     })
     it('TC02-Pengguna gagal registrasi menggunakan format password yang salah', () => {
-        Register.do_register(faker.name.firstName(), emailTester, 'formatpasswordsalahnih')
+        Register.do_register(randomName, emailTester, wrongPassword)
         Register.verify_failed_register_using_invalid_format_password()
     })
     it('TC03-Pengguna berhasil registrasi dengan email yang belum terdaftar', () => {
-        Register.do_register(faker.name.firstName(), faker.internet.email(), passwordTester)
+        Register.do_register(randomName, randomEmail2, passwordTester)
         Register.click_btnRegistrasi()
         Register.verify_success_register_using_valid_data()
     })
@@ -39,7 +50,7 @@ describe('[Cypress] feature-forgotPassword', () => {
         ForgotPassword.go_to_forgotPassword_page()
     })
     it('TC04-Pengguna gagal meminta link forgot password dengan email yang tidak terdaftar', () => {
-        ForgotPassword.do_requestForgotPassword(faker.internet.email())
+        ForgotPassword.do_requestForgotPassword(randomEmail1)
         ForgotPassword.verify_failed_request_forgot_password()
         
     })
@@ -54,11 +65,11 @@ describe('[Cypress] feature-login', () => {
         Login.go_to_login_page()
     })
     it('TC06-Pengguna gagal login dengan email yang belum terdaftar', () => {
-        Login.do_login(faker.internet.email(), passwordTester)
+        Login.do_login(randomEmail1, passwordTester)
         Login.verify_failed_login_using_unregisteredEmail()
     })
     it('TC07-Pengguna gagal login dengan password yang salah', () => {
-        Login.do_login(emailTester, 'passwordsalaaaah')
+        Login.do_login(emailTester, wrongPassword)
         Login.verify_failed_login_using_wrongPassword()
     })
     it('TC08-Pengguna berhasil login dengan email dan password yang benar', () => {
@@ -79,8 +90,7 @@ describe('[Cypress] feature-updateProfile', () => {
         UpdateProfile.verify_failed_updateProfile()
     })
     it('TC10-Pengguna berhasil memperbarui data profile dengan mengisi semua data yang valid', () => {
-        var randomPhone = Math.floor(100000000 + Math.random() * 900000000000);
-        UpdateProfile.do_updateAllDataProfile(faker.name.firstName(), emailTester, randomPhone, faker.date.birthdate(), faker.address.cityName())
+        UpdateProfile.do_updateAllDataProfile(randomName, emailTester, randomPhone, selectGender, selectBirthday,randomCity )
         UpdateProfile.clickSave_button()
         UpdateProfile.verify_success_updateProfile()
     })
