@@ -2,13 +2,9 @@ class login{
     go_to_login_page(){
         cy.get('div.gap-2 > .font-medium').click()
     }
-    input_email(email){
+    do_login(email, password){
         cy.get('input.border').type(email)
-    }
-    input_password(password){
         cy.get('.grid > .flex > .w-full').type(password)
-    }
-    clickButton_masuk(){
         cy.get('.btn-primary').click()
         cy.wait(1)
     }
