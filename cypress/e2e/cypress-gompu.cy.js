@@ -97,3 +97,4 @@ describe('[Cypress] feature-updateProfile', () => {
         UpdateProfile.verify_success_updateProfile()
     })
 })
+

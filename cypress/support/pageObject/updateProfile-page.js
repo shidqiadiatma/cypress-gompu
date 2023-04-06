@@ -31,4 +31,3 @@ class updateProfile{
 }
 export default updateProfile
 
-
