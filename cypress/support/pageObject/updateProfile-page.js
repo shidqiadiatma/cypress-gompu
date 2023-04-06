@@ -1,4 +1,3 @@
-
 class updateProfile{
     go_to_UpdateProfile_page(){
         cy.get('.gap-14 > [href="/profile"]').click()
@@ -10,7 +9,6 @@ class updateProfile{
         cy.get('.flex > .w-full').type(' ').clear()
         cy.get('input[type="date"]').click('').clear()
         cy.xpath('//*[@id="__layout"]/div/div/form/input[4]').type(' ').clear()
-        
     }
     do_updateAllDataProfile(fileImage, fullNameUpdate, emailUpdate, noPhoneUpdate, gender, dateUpdate, cityUpdate){
         cy.get('.pt-4').selectFile(fileImage)
