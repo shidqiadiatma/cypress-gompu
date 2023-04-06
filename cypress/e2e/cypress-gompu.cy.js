@@ -21,8 +21,10 @@ var randomEmail1 = 'email'+ Math.floor(100000000 + Math.random() * 900000000) + 
 var randomEmail2 = faker.internet.email()
 var wrongPassword = 'passwordsalah'
 var photoProfile = faker.helpers.arrayElement(['/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing1.jpg',
-'/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing2.jpg','/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing3.jpg',
-'/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing4.jpg','/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing5.jpg'])
+                                                '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing2.jpg',
+                                                '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing3.jpg',
+                                                '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing4.jpg',
+                                                '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing5.jpg'])
 
 describe('[Cypress] feature-registration', () => {  
     beforeEach(() => {
