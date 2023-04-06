@@ -14,3 +14,4 @@ class forgotPassword{
     }
 }
 export default forgotPassword
+

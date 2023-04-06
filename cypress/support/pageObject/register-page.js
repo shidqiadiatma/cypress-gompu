@@ -18,7 +18,7 @@ class register{
     }
     verify_success_register_using_valid_data(){
         cy.get('#swal2-title').should('have.text', 'Pendaftaran berhasil, harap verifikasi akun Anda!')
-    }
-    
+    } 
 }
 export default register
+
