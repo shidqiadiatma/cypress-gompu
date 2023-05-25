@@ -13,18 +13,20 @@ const UpdateProfile = new updateProfile()
 var emailTester = ('shidqiadiatma@dispostable.com')
 var passwordTester = ('passwordBenar12*')
 var selectGender = faker.helpers.arrayElement(['Perempuan', 'Laki-laki'])
-var selectBirthday = faker.helpers.arrayElement(['2000-05-12', '2001-08-12', '2001-04-21', '1990-12-01', '1995-06-09'])
+var selectBirthday = faker.helpers.arrayElement(
+    ['2000-05-12', '2001-08-12', '2001-04-21', '1990-12-01', '1995-06-09'])
 var randomName = faker.name.firstName()
 var randomCity = faker.address.cityName()
 var randomPhone = Math.floor(100000000 + Math.random() * 900000000000);
 var randomEmail1 = 'email'+ Math.floor(100000000 + Math.random() * 900000000) + '@mail.com';
 var randomEmail2 = faker.internet.email()
 var wrongPassword = 'passwordsalah'
-var photoProfile = faker.helpers.arrayElement(['/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing1.jpg',
-                                                '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing2.jpg',
-                                                '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing3.jpg',
-                                                '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing4.jpg',
-                                                '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing5.jpg'])
+var photoProfile = faker.helpers.arrayElement(
+    ['/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing1.jpg',
+    '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing2.jpg',
+    '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing3.jpg',
+    '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing4.jpg',
+    '/my-document/automations/Cypress/cypress/testData/fotoProfil/kucing5.jpg'])
 
 describe('[Cypress] feature-registration', () => {  
     beforeEach(() => {
