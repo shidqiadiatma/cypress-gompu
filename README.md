@@ -7,13 +7,13 @@
 ![image](https://github.com/shidqiadiatma/cypress-gompu/assets/112541317/8602e03e-9ea9-4ace-b8c2-a711654d77b8)
 
 ## iteration-3
-![image](https://user-images.githubusercontent.com/112541317/229548266-4f2cc9ae-cbbc-43cf-95c2-06fa792f8801.png)
+![image](https://github.com/shidqiadiatma/cypress-gompu/assets/112541317/af7f71a7-11b0-42da-a57f-c148634926fd)
 
 ## iteration-4
-![image](https://user-images.githubusercontent.com/112541317/229549040-6b8fb4f7-23cb-466c-8e25-464a8b6cbe65.png)
+![image](https://github.com/shidqiadiatma/cypress-gompu/assets/112541317/d6b2611c-102c-4f92-8a77-92da8c0f16e7)
 
 # iteration-5
-![image](https://user-images.githubusercontent.com/112541317/229549794-9b465e56-53e5-468f-a6df-b8a8de6b29cc.png)
+![image](https://github.com/shidqiadiatma/cypress-gompu/assets/112541317/fa7e369a-bc8a-49d2-b067-bf756fbdd399)
 
 
 
