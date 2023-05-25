@@ -10,7 +10,8 @@ class updateProfile{
         cy.get('input[type="date"]').click('').clear()
         cy.xpath('//*[@id="__layout"]/div/div/form/input[4]').type(' ').clear()
     }
-    do_updateAllDataProfile(fileImage, fullNameUpdate, emailUpdate, noPhoneUpdate, gender, dateUpdate, cityUpdate){
+    do_updateAllDataProfile(fileImage, fullNameUpdate, emailUpdate, noPhoneUpdate, 
+        gender, dateUpdate, cityUpdate){
         cy.get('.pt-4').selectFile(fileImage)
         cy.xpath('//*[@id="__layout"]/div/div/form/input[1]').clear().type(fullNameUpdate)
         cy.xpath('//*[@id="__layout"]/div/div/form/input[2]').clear().type(emailUpdate)
