@@ -94,7 +94,8 @@ describe('[Cypress] feature-updateProfile', () => {
         UpdateProfile.verify_failed_updateProfile()
     })
     it('TC10-Pengguna berhasil memperbarui data profile dengan mengisi semua data yang valid', () => {
-        UpdateProfile.do_updateAllDataProfile(photoProfile, randomName, emailTester, randomPhone, selectGender, selectBirthday,randomCity )
+        UpdateProfile.do_updateAllDataProfile(photoProfile, randomName, emailTester, randomPhone, 
+            selectGender, selectBirthday,randomCity )
         UpdateProfile.clickSave_button()
         UpdateProfile.verify_success_updateProfile()
     })
